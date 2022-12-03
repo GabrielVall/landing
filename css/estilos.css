@@ -91,7 +91,7 @@ img{
     max-width: 100%;
 }
 .logo img{
-    max-width: 75px;
+    max-width: 60px;
 } 
 .white_button{
     background-color: white;
@@ -112,9 +112,9 @@ img{
     transform: translate(25%,-25%) skewY(30deg);
     background-image: linear-gradient(45deg,#53f 40%,#506690 100%);
     position: absolute;
-    top: -0%;
+    top: -5%;
     right: 0%;
-    width: 90vw;
+    width: 95vw;
     height: 100vh;
     border-radius: 100px;
 }
@@ -165,3 +165,63 @@ img{
     border-radius: 10em;
     transform: rotate(30deg);
  }
+ .animated_circles span:not(.cross){
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: 10s infinite roll;
+    border: 1px solid rgb(255, 255, 255); 
+    border-style: dashed;
+ }
+ .animated_circles :nth-child(1){
+    border-width: 4px;
+    right: 30%;
+    top: 35%;
+ }
+ .animated_circles :nth-child(2){
+    right: 20%;
+    top: 25%;
+ }
+ .cross{
+    background: #fff;
+    width: 3px;
+    height: 20px;
+    right: 10%;
+    top: 25%;
+    position: absolute;
+ }
+ .cross{
+    animation: 10s infinite roll;
+ }
+ .cross:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 3px;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.dots:not(.n2){
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    background-image: radial-gradient(rgba(0,0,0,.1) 3px,transparent 3px);
+    background-size: 30px 30px;
+    position: absolute;
+}
+.dots.n2{
+    bottom: 30%;
+    right: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: transparent;
+    background-image: radial-gradient(rgba(0,0,0,.1) 2px,transparent 2px);
+    background-size: 20px 20px;
+}
